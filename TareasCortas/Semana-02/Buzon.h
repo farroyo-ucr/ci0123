@@ -2,8 +2,8 @@
  *  Esta clase encapsula los llamados al sistema en UNIX, para intercambio de mensajes por medio de buzones
  *  Se provee facilidades para el envio y recepcion de mensajes de cualquier tipo definido por el usuario
  *
- *  Autor: CI0117 Programacion Paralela y Concurrente
- *  Fecha: 2020-i
+ *  Autor: CI0123 Proyecto Integrador Redes y Sistemas Operativos
+ *  Fecha: 2020-
  *
  *  Ejemplo de un mensaje que contiene etiquetas HTML y su cantidad de apariciones:
  *

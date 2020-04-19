@@ -1,4 +1,4 @@
-# CI0117 Programación Paralela y Concurrente
+# CI0123 Proyecto Integrador Redes y Sistemas Operativos
 # 2020-i
 #
 

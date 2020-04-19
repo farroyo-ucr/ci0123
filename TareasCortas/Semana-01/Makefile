@@ -15,10 +15,10 @@ Buzon.o: Buzon.h Buzon.cc
 enviarConClases.o: enviarConClases.cc Buzon.h
 	g++ -g -c enviarConClases.cc
 
-enviarConClases: t0-envia.o Buzon.o
-	g++ enviarConClases Buzon.o -o enviarConClases
+enviarConClases: enviarConClases.o Buzon.o
+	g++ enviarConClases.o Buzon.o -o enviarConClases
 
-# Enlaza los archivos t0-recibe y Buzon para crear el ejecutable
+# Enlaza los archivos recibirConClases y Buzon para crear el ejecutable
 recibirConClases: recibirConClases.o Buzon.o
 	g++ recibirConClases.o Buzon.o -o recibirConClases
 
