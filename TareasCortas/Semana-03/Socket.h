@@ -15,7 +15,7 @@ class Socket{
         Socket( char, bool = false );
         Socket( int );
         ~Socket();
-        int Connect( char *, int );
+        int Connect( const char *, int );
         int Connect( char *, char * );
         void Close();
         int Read( char *, int );
