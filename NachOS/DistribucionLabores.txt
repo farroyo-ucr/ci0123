@@ -1,0 +1,52 @@
+Problema
+   Solución
+      Determinística
+      Probabilística
+      Heurística
+
+NachOS (PIRO)
+
+   MIPS (maq. virtual, memoria, int, clock, disco, etc.)
+      Directorio "machine" está la implantación de MIPS
+
+   Threads 								TH
+      Sync (facilitar herramientas para sincronización de procesos/hilos)
+         Semáforos, Locks, Variables Condition, Mutex, Barrier
+      
+
+   Userprog (system calls)
+      - Archivos ( Open, Close, Read, Write, Create, TAA )		UP1
+      - Correr ( Fork, Exec, Join, Yield, Exit )			UP2
+      - Sincronización ( Sem, Lock, Cond, Barrier )			UP3
+      - Socket ( Crear, Cerrar, Connect, Bind, Listen, Accept )	UP4
+
+      - Loader, traer un programa del disco y colocarlo en memoria	LO
+         - Memoria está dividida en páginas (bloques de 128 bytes) "marcos"
+         - Programas de usuario los vamos en páginas de 128 bytes
+
+   test (programas de usuario)
+      - directorio con los programas de usuario
+      - tiene el "Makefile" para construir los programas ejecutables MIPS del usuario
+
+   bin (programas ejecutables y utilitarios)
+
+   Virtual memory (opcional)
+
+   File system (no lo vamos a hacer)
+
+   Network (no lo vamos a hacer)
+
+   Programar un cliente utilizando NachOS				Cli
+      - Crear un programa de usuario cliente web
+
+
+Asignación de tareas a grupos
+
+	%	10, 30,  25,  25,  10, 20
+Grupo h	TH, LO, UP1, UP2, Cli, VM	RG 5
+Grupo i	TH, LO, UP1, UP3, Cli, VM	RG 1
+Grupo j	TH, LO, UP1, UP4, Cli, VM	RG 3
+Grupo k	TH, LO, UP2, UP3, Cli, VM	RG 6
+Grupo l	TH, LO, UP2, UP4, Cli, VM	RG 2
+Grupo n	TH, LO, UP3, UP4, Cli, VM	RG 4
+
