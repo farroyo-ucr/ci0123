@@ -26,6 +26,7 @@ void * AddOneWithMutex( void * param ) {
 
    for ( i = 0; i < 1000; i++ ) {
       myTotal++;
+   usleep( 1 );
    }
 
    mutex->Lock();
@@ -45,6 +46,7 @@ void * AddOne( void * param ) {
 
    for ( i = 0; i < 1000; i++ ) {
       total++;
+      usleep( 1 );
    }
 
    pthread_exit( 0 );
@@ -62,6 +64,7 @@ long SerialTest( long hilos ) {
 
       for ( i = 0; i < 1000; i++ ) {
          total++;			// Suma uno
+         usleep( 1 );
       }
 
    }

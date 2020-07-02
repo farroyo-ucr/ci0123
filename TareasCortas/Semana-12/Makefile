@@ -1,17 +1,11 @@
+# Makefile for TCP example
 
-Socket.o: Socket.cc Socket.h
-	g++ -g -c Socket.cc
+cli-tcp.out: cli-tcp.c
+	gcc -g cli-tcp.c -o cli-tcp.out
 
-udp-server.o: udp-server.cc Socket.h
-	g++ -g -c udp-server.cc
+serv-tcp.out: serv-tcp.c
+	gcc -g serv-tcp.c -o serv-tcp.out
 
-udp-client.o: udp-client.cc Socket.h
-	g++ -g -c udp-client.cc
-
-udp-server.out: udp-server.o Socket.o
-	g++ -g udp-server.o Socket.o -o udp-server.out
-
-
-udp-client.out: udp-client.o Socket.o
-	g++ -g udp-client.o Socket.o -o udp-client.out
+int-tcp.out: int-tcp.c
+	gcc -g int-tcp.c -o int-tcp.out
 
